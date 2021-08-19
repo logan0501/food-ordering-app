@@ -10,10 +10,7 @@ body{
    color: black;
    
 }
-.logo{
-    background-size: cover;
-    height: 40px;
-}
+
 .navbar{
     padding: 1%;
     display: flex;
@@ -59,46 +56,32 @@ body{
     color: #D92B40;
     cursor: pointer;
 }
-
 .mobiledrawer{
     display: none;
 }
-.bodycontent{
-    margin: 2% 0 0 5%;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
+h1{
+    font-size: 2rem;
+    margin: 10px;
     
 }
-.bodytext p{
-    color:rgba(0,0,0,0.6);
-
-}
-.bodytext h1{
-    font-size: 4rem;
-    margin: 0;
-}
-.bodytext h1 span{
-    color: #E0001E;
-}
-.bodybtns{
-    margin-top: 5%;
-    
-}
-.bodybtns button{
-    background-color: #E3293F;
-    color: white;
-    font-size: 0.75rem;
-    padding: 10px 20px;
-    border: none;
+.ordercard{
+    background-color: white;
+    display:inline-block;
+    margin: 15px;
     border-radius: 10px;
-    box-shadow: 0 0 15px 0 #E3293F; 
+    overflow: hidden;
+    box-shadow: 0 0 10px 1px black ;
+    padding: 10px;
 }
-.bodybtns a{
-    margin-left: 20px;
-    color: #E3293F;
+.ordercard img{
+    width: 300px;
+    background-size: cover;
+    border-radius: 10px;
 }
-.foodimage{
-    height: 80%;
+.fooditems{
+    
+    overflow: auto;
+    white-space: nowrap;
 }
 @media (max-width:600px) {
     .navbar{
@@ -111,19 +94,5 @@ body{
   
 }
 
-@media (max-width:1000px) {
-   
-    .bodycontent{
-        grid-template: repeat(2,auto)/repeat(1,auto);
-        align-content: center;
-        
-    }
-    .foodimage{
-        margin-top: 20px;
-        text-align: center;
-        height: 50%;
-        background-size: cover;
-    }
-}
 
 
