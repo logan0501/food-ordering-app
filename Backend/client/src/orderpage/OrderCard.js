@@ -2,8 +2,9 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { useState } from 'react';
 
 var items=[]
+var cost=0
 export default function OrderCard(){
-    const [ordereditems,setorder]=useState([])
+   
     const fooditems =[
     {   id:1,
        imgurl: "https://static.toiimg.com/thumb/54308405.cms?width=1200&height=900",
@@ -14,14 +15,14 @@ export default function OrderCard(){
     },
   {     id:2,
        imgurl: "https://static.toiimg.com/thumb/54308405.cms?width=1200&height=900",
-       name:"Briyani",
+       name:"Briyani 2",
        description:"Tasty food",
        price:"100",
        quantity:"1",
     },
  {id:3,
        imgurl: "https://static.toiimg.com/thumb/54308405.cms?width=1200&height=900",
-       name:"Briyani",
+       name:"Briyani 3",
        description:"Tasty food",
        price:"100",
        quantity:"1",
@@ -29,29 +30,38 @@ export default function OrderCard(){
   {
       id:4,
        imgurl: "https://static.toiimg.com/thumb/54308405.cms?width=1200&height=900",
-       name:"Briyani",
+       name:"Briyani 4",
        description:"Tasty food",
        price:"100",
        quantity:"1",
     },
     {id:5,
         imgurl: "https://static.toiimg.com/thumb/54308405.cms?width=1200&height=900",
-        name:"Briyani",
+        name:"Briyani 5",
         description:"Tasty food",
         price:"100",
         quantity:"1",
      } , {
          id:6,
         imgurl: "https://static.toiimg.com/thumb/54308405.cms?width=1200&height=900",
-        name:"Briyani",
+        name:"Briyani 6",
         description:"Tasty food",
         price:"100",
         quantity:"1",
      }];
      function additem(e){
-        
-        items.push(e);
+         if(!sessionStorage.getItem('items')){
+            items=[]; 
+            items.push(e);
+            sessionStorage.setItem('items',JSON.stringify(items));
+         }
+        if(!items.includes(e)){
+            items.push(e);
+
         sessionStorage.setItem('items',JSON.stringify(items));
+        
+        }
+        
      }
     return(
         
