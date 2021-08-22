@@ -70,8 +70,14 @@ h1{
     margin: 15px;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 0 10px 1px black ;
+    border: 1px solid black;
+    box-shadow: 0 0 4px grey;
     padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+.ordercard:hover{
+    box-shadow: 0 0 8px grey;
+    transform: scale(1.01);
 }
 .ordercard img{
     width: 300px;
